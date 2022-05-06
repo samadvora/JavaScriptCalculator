@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="calproject.css">
+    <script src="calcproject.js"></script>
+</head>
+<body>
+  <h1>Scientific Calculator</h1>
+<form name="calculator">
+ <table class="tablecalc" cellspacing="0" cellpadding="1">
+   <tr>
+     <td colspan="5"><input id="screen" name="screen" value="0" size="28" maxlength="25"></td>
+   </tr>
+   <tr>
+     <td><input type="button" class="Row1" name="Row1" value="C" onclick="this.form.screen.value= 0"></td>
+     <td><input type="button" class="Row1" name="Row1" value="<<" onclick="deleteChar(this.form.screen)"></td>
+     <td><input type="button" class="Row1" name="Row1" value="=" onclick="if(checkNum(this.form.screen.value)) { compute(this.form) }"></td>
+     <td><input type="button" class="Col4" name="Col4"  value="&#960;" onclick="addChar(this.form.screen,'3.14159265359')"></td>
+     <td><input type="button" class="Operations" name="Operations" value="%" onclick=" percent(this.form.screen)"></td>
+   </tr>
+   <tr>
+     <td><input type="button" class="Numbers" name="Numbers" value="7" onclick="addChar(this.form.screen, '7')"></td>
+     <td><input type="button" class="Numbers" name="Numbers" value="8" onclick="addChar(this.form.screen, '8')"></td>
+     <td><input type="button" class="Numbers" name="Numbers" value="9" onclick="addChar(this.form.screen, '9')"></td>
+     <td><input type="button" class="Col4" name="Col4"  value="x&#94;" onclick="if(checkNum(this.form.screen.value)) { exp(this.form) }"></td>
+     <td><input type="button" class="Operations" name="Operations" value="/" onclick="addChar(this.form.screen, '/')"></td>
+   <tr>
+     <td><input type="button" class="Numbers" name="Numbers" value="4" onclick="addChar(this.form.screen, '4')"></td>
+     <td><input type="button" class="Numbers" name="Numbers" value="5" onclick="addChar(this.form.screen, '5')"></td>
+     <td><input type="button" class="Numbers" name="Numbers" value="6" onclick="addChar(this.form.screen, '6')"></td>
+     <td><input type="button" class="Col4"  name="Col4"  value="ln" onclick="if(checkNum(this.form.screen.value)) { ln(this.form) }"></td>
+     <td><input type="button" class="Operations" name="Operations" value="X" onclick="addChar(this.form.screen, '*')"></td>
+   </tr>
+   <tr>
+     <td><input type="button" class="Numbers" name="Numbers" value="1" onclick="addChar(this.form.screen, '1')"></td>
+     <td><input type="button" class="Numbers" name="Numbers" value="2" onclick="addChar(this.form.screen, '2')"></td>
+     <td><input type="button" class="Numbers" name="Numbers"value="3" onclick="addChar(this.form.screen, '3')"></td>
+     <td><input type="button" class="Col4"  name="Col4" value="&radic;" onclick="if(checkNum(this.form.screen.value)) { sqrt(this.form) }"></td>
+     <td><input type="button" class="Operations" name="Operations" value="-" onclick="addChar(this.form.screen, '-')"></td>
+   </tr>
+   <tr>
+     <td><input type="button" class="Operations" name="Operations" value="&#177" onclick="changeSign(this.form.screen)"></td>
+     <td><input type="button" class="Numbers" name="Numbers" value="0" onclick="addChar(this.form.screen, '0')"></td>
+     <td><input type="button" class="Operations" name="Operations" value="&#46;" onclick="addChar(this.form.screen, '&#46;')"></td>
+     <td><input type="button" class="Col4"  name="Col4"  value="x&#50;" onclick="if(checkNum(this.form.screen.value)) { square(this.form) }"></td>
+     <td><input type="button" class="Operations" name="Operations" value="+" onclick="addChar(this.form.screen, '+')"></td>
+   </tr>
+   <tr>
+     <td><input type="button" class="Operations" name="Operations" value="(" onclick="addChar(this.form.screen, '(')"></td>
+     <td><input type="button" class="Operations" name="Operations" value=")" onclick="addChar(this.form.screen,')')"></td>
+     <td><input type="button" class="Operations" name="Operations" value="cos" onclick="if(checkNum(this.form.screen.value)) { cos(this.form) }"></td>
+     <td><input type="button" class="Operations" name="Operations" value="sin" onclick="if(checkNum(this.form.screen.value)) { sin(this.form) }"></td>
+     <td><input type="button" class="Operations" name="Operations" value="tan" onclick="if(checkNum(this.form.screen.value)) { tan(this.form) }"></td>
+  </tr>
+ </table>
+</form>
+    <br/>
+</body>
+<footer>
+   <p> &copy; 23-07-2021 Calculator Project by Samad Hatim Vora</p>
+    <a href="mailto:samadvora166@gmail.com">samadvora166@gmail.com</a>
+</footer>
+</html>    
